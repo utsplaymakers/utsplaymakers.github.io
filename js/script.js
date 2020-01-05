@@ -60,7 +60,8 @@ $(document).ready(function()
 	}
 	
 	// Page navigation
-	var isWorkCurrentPage = true;
+	var isGamesCurrentPage = true;
+	var isEventsCurrentPage = false;
 	var isAboutCurrentPage = false;
 	
 	$("#logoDetailView").click(function()
@@ -68,18 +69,21 @@ $(document).ready(function()
 		window.location = "../../index.html";
 	});
 	
-	$("#workPage, #logo").click(function()
+	$("#gamesPage, #logo").click(function()
 		{
-			if(!isWorkCurrentPage)
+			if(!isGamesCurrentPage)
 			{
-				isWorkCurrentPage = true;
+				var currentPageName = isAboutCurrentPage ? "#about" : "#events";
+				isGamesCurrentPage = true;
 				isAboutCurrentPage = false;
-				$("#workPage").attr("class", "currentPage");
+				isEventsCurrentPage = false;
+				$("#gamesPage").attr("class", "currentPage");
 				$("#aboutPage").removeClass("currentPage");
+				$("#eventsPage").removeClass("currentPage");
 				
-				$("#about").fadeOut(500, function()
+				$(currentPageName).fadeOut(500, function()
 				{
-					$("#work").fadeIn(500);
+					$("#games").fadeIn(500);
 				});
 			}
 		});
@@ -88,24 +92,48 @@ $(document).ready(function()
 		{
 			if(!isAboutCurrentPage)
 			{
+				var currentPageName = isGamesCurrentPage ? "#games" : "#events";
 				isAboutCurrentPage = true;
-				isWorkCurrentPage = false;
+				isGamesCurrentPage = false;
+				isEventsCurrentPage = false
 				$("#aboutPage").attr("class", "currentPage");
-				$("#workPage").removeClass("currentPage");
+				$("#gamesPage").removeClass("currentPage");
+				$("#eventsPage").removeClass("currentPage");
 				
-				$("#work").fadeOut(500, function()
+				
+				$(currentPageName).fadeOut(500, function()
+				{
+					$("#about").fadeIn(500);
+				});
+			}
+		});
+
+	$("#eventsPage").click(function()
+		{
+			if(!isEventsCurrentPage)
+			{
+				var currentPageName = isGamesCurrentPage ? "#games" : "#about";
+				isEventsCurrentPage = true;
+				isGamesCurrentPage = false;
+				isAboutCurrentPage = false
+				$("#eventsPage").attr("class", "currentPage");
+				$("#gamesPage").removeClass("currentPage");
+				$("#aboutPage").removeClass("currentPage");
+				
+				$(currentPageName).fadeOut(500, function()
 				{
 					$("#about").fadeIn(500);
 				});
 			}
 		});
 	
-	// Make Work page current page
-	$("#workPage").attr("class", "currentPage");
+	// Make Games page current page
+	$("#gamesPage").attr("class", "currentPage");
 	
 	// Hide About page
 	//$("#about").css("display", "none");
 	$("#about").fadeOut(0);
+	$("#events").fadeOut(0);
 	
 	// For site fade site in
 	$(".container").css("display", "none");
@@ -185,7 +213,7 @@ jQuery(document).ready(function($) {
 				var numSlides = sliderInstance.numSlides;
 				
 				// Fixes bug when resizing window on About page
-				$("#logo, #workPage").click(function() {
+				$("#logo, #gamesPage").click(function() {
 					function bugFix() {
 						sliderInstance.updateSliderSize();
 						$(".projectThumbnailHover").fadeOut(800);
