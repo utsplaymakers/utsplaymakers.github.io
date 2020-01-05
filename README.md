@@ -1,4 +1,4 @@
-## UTS Interaction and Games Design Society
+## UTS Interaction and Games Design Society Official Website
 
 ### Who are we?
 
@@ -7,3 +7,5 @@ We are a society of student game developers and UX designers from the University
 ### Our events
 
 [Facebook](https://www.facebook.com/utsixgdesign/) | [Instagram](https://www.instagram.com/utsixgdesign/) | [Twitter](https://twitter.com/utsixgdesign/)
+
+Powered by Type & Grids
