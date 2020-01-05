@@ -122,7 +122,7 @@ $(document).ready(function()
 				
 				$(currentPageName).fadeOut(500, function()
 				{
-					$("#about").fadeIn(500);
+					$("#events").fadeIn(500);
 				});
 			}
 		});
