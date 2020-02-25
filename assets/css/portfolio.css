@@ -51,7 +51,7 @@ margin: 8px -16px;
 .content {
     /* background-color: #f0bba3; */
     padding: 18px;
-    margin: 10px;
+    margin: 0px;
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
@@ -73,3 +73,6 @@ margin: 8px -16px;
     padding-bottom: 20px;
 }
 
+.tiny-link {
+    font-size: 10px;
+}
