@@ -44,16 +44,16 @@
         max-width: 45%;
         border-radius: 25px;
         background: #fff;
-        box-shadow: inset 0 4px 7px 1px #fff, inset 0 -5px 20px rgba(173, 186, 204, .25), 0 0px 33px rgba(0, 21, 64, .14), 0 10px 20px rgba(0, 21, 64, .05);
+        box-shadow: inset 0 4px 7px 1px #fff, inset 0 -5px 20px rgba(186, 122, 122, 0.25), 0 0px 33px rgba(0, 21, 64, .14), 0 10px 20px rgba(0, 21, 64, .05);
     }
 
     .ipad-screen {
         display: block;
-        position: absolute;
-        padding-bottom: 40px;
-        margin-top: 40px;
-        right: 1px;
-        width: 400%;
+        position: relative;
+        padding-bottom: 0px;
+        margin-top: 20px;
+        right: 200px;
+        width: 160%;
     }
 
     .feature-section {
@@ -94,7 +94,7 @@
 }
 
 .team {
-    padding-bottom: 130px;
+    padding-bottom: 60px;
 }
 
 .team-member {

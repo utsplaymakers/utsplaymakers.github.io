@@ -21,10 +21,16 @@ body {
 .hero-background {
     overflow: hidden;
     position: relative;
-    background: -webkit-linear-gradient(117deg, rgb(117, 29, 65), rgb(0, 0, 0));
-    background: linear-gradient(117deg, rgb(117, 29, 65), rgb(0, 0, 0));
-    background: -webkit-radial-gradient(rgb(117, 29, 65), rgb(0, 0, 0));
-    background: radial-gradient(rgb(117, 29, 65), rgb(0, 0, 0));
+    background: -webkit-linear-gradient(117deg, rgb(218, 100, 82), rgb(165, 51, 23));
+    background: linear-gradient(117deg, rgb(218, 100, 82), rgb(165, 51, 23));
+    background: -webkit-radial-gradient(rgb(218, 100, 82), rgb(165, 51, 23));
+    background: radial-gradient(rgb(218, 100, 82), rgb(165, 51, 23));
+}
+
+.secondary-background {
+    overflow: hidden;
+    position: relative;
+    background: rgb(218, 100, 82);
 }
 
 .bold {
@@ -114,9 +120,9 @@ body {
 .hero-btn {
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
-    background-color: rgb(212, 64, 19);
+    background-color: rgb(0,0,0);
     border-radius: 10px;
-    border: 1px solid rgb(212, 64, 19);
+    border: 0px solid rgb(212, 64, 19);
     width: 210px;
     height: 51px;
     color: white;
@@ -124,7 +130,7 @@ body {
 }
 
 .hero-btn:hover {
-    background-color: rgb(238, 89, 43);
+    background-color: rgb(252, 108, 64);
     color: white;
     border-radius: 20px;
     -webkit-box-shadow: -1px 9px 46px -17px rgba(43, 43, 43, 1);
@@ -156,7 +162,6 @@ body {
 }
 
 .features-section {
-    background-color: black;
     padding-top: 40px;
     padding-bottom: 80px;
     text-align: center;
@@ -166,7 +171,7 @@ body {
 
 .features-headline {
     color: white;
-    padding-bottom: 30px;
+    padding-bottom: 15px;
 }
 
 .features-container {
@@ -176,7 +181,7 @@ body {
 
 .feature {
     text-align: center;
-    padding: 30px;
+    padding: 15px;
 }
 
 .feature-no-display {
@@ -376,7 +381,7 @@ ul {
 
 .team {
     padding-bottom: 0px;
-    padding-top: 30px;
+    padding-top: 18px;
 }
 
 .team-container {
@@ -391,7 +396,7 @@ ul {
 
 .team-member {
     text-align: center;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
 }
 
 .team-member-position {
@@ -399,15 +404,18 @@ ul {
 }
 
 .team-member-text {
-    padding-top: 25px;
+    padding-top: 15px;
+}
+
+.team-member-pic {
+    width: 150px;
 }
 
 .team-social-icon {
-    padding: 7px;
+    padding: 5px;
 }
 
 .blue-section {
-    background-color: #0ABCEB;
     color: white;
     margin: auto;
     text-align: center;
@@ -441,7 +449,7 @@ ul {
 }
 
 .submit-btn {
-    background-color: #25F18B;
+    background-color: rgb(0,0,0);
     border-radius: 10px;
     color: #fff;
     height: 51px;
@@ -454,22 +462,16 @@ ul {
 }
 
 .submit-btn:hover {
-    background-color: #6affb4;
+    background-color: rgb(240, 95, 50);
     color: white;
     border-radius: 20px;
     -webkit-box-shadow: -1px 9px 46px -17px rgba(43, 43, 43, 1);
-    -moz-box-shadow: -1px 9px 46px -17px rgba(43, 43, 43, 1);
+    -moz-box-shadow: -1px 9px 46px -17px rgb(96, 85, 85);
     box-shadow: -1px 9px 46px -17px rgba(43, 43, 43, 1);
 }
 
 #newsletter-spinner {
     display: none;
-}
-
-.fragmented-background {
-    width: 140%;
-    position: absolute;
-    left: -50px;
 }
 
 .email-form-div {
@@ -478,9 +480,9 @@ ul {
 }
 
 .footer {
-    background-color: #464646;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    background-color: #222222;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .webscope-text {
@@ -495,9 +497,8 @@ ul {
 }
 
 .social-links {
-    float: none;
     text-align: center;
-    padding-top: 10px;
+    padding-top: 5px;
 }
 
 .social-link {
