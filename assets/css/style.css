@@ -464,7 +464,7 @@ ul {
 }
 
 .submit-btn:hover {
-    background-color: rgb(240, 95, 50);
+    background-color: rgb(240, 50, 50);
     color: white;
     border-radius: 20px;
     -webkit-box-shadow: -1px 9px 46px -17px rgba(43, 43, 43, 1);
