@@ -94,6 +94,16 @@ a {
     color: #f0bba3;
 }
 
-a .hover {
+a hover {
     color: #f05757
+}
+
+.theme-desc {
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+}
+
+.desc {
+    text-align: center;
 }
