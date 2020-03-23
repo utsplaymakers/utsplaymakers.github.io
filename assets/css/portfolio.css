@@ -94,8 +94,8 @@ a {
     color: #f0bba3;
 }
 
-a hover {
-    color: #f05757
+a:hover {
+    color: #ffffff
 }
 
 .theme-desc {
