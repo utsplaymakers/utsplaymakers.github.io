@@ -21,7 +21,7 @@ body {
 .hero-background {
     overflow: hidden;
     position: relative;
-    background: rgb(218, 100, 82);
+    background: rgb(218, 82, 82);
     /* background: -webkit-linear-gradient(117deg, rgb(218, 100, 82), rgb(165, 51, 23));
     background: linear-gradient(117deg, rgb(218, 100, 82), rgb(165, 51, 23));
     background: -webkit-radial-gradient(rgb(218, 100, 82), rgb(165, 51, 23));
@@ -31,7 +31,7 @@ body {
 .secondary-background {
     overflow: hidden;
     position: relative;
-    background: rgb(218, 100, 82);
+    background: rgb(218, 82, 82);
 }
 
 .bold {
