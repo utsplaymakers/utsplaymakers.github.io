@@ -90,6 +90,28 @@ h2 {
     width: 100%;
 }
 
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+}
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+}
+
+.golden {
+    background-color: #f3d582;
+    border-color: #f3d582;
+}
+
+.silver {
+    background-color: #d3d3d3;
+    border-color: #d3d3d3;
+}
+
 a {
     color: #f0a3a3;
 }
