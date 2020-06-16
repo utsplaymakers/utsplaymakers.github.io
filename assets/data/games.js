@@ -15,5 +15,12 @@ const gameJams = [
 				place: 1
 			}
 		]
+	},
+	{
+
 	}
 ]
+
+/*
+	Vanilla JS does not support client side json file imports, for security reasons
+*/
