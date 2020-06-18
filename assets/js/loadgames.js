@@ -59,5 +59,66 @@ function renderHeaderElements(gameJam)
  */
 function renderGameEntryElements(gameEntries)
 {
-	console.log("Implement me!");
+	if(gameEntries.length === 0)
+	{
+		raiseError("No number game entry found in renderGameEntryElements");
+		return;
+	}
+	// create the 'row' div element
+	let rowDiv = document.createElement("div");
+	rowDiv.classList.add("row");
+
+	// create the columns
+	let columnOne = document.createElement("div");
+	let columnTwo = document.createElement("div");
+
+	columnOne.classList.add("column"); columnTwo.classList.add("column");
+
+	for(let i = 0; i < gameEntries.length; ++i)
+	{
+		// create content div 
+		let contentDiv = document.createElement("div");
+		contentDiv.classList.add("content");
+
+		// render banner based on placing
+		if(gameEntries[i].place !== 0)
+		{
+			contentDiv.appendChild(generatePlacementElement(gameEntries[i].place));
+		}
+	}
+
+
+
+}
+
+/**
+ *  
+ * @param {integer} place placement of the entry in the jam (1: first, 2: 2nd)
+ * @return {} html element that displays the placement banner
+ */
+function generatePlacementElement(place)
+{
+	let placementDiv = document.createElement("div");
+	placementDiv.classList.add("tab");
+	if(place === 1)
+	{
+		placementDiv.classList.add("golden");
+		placementDiv.innerText = "1st";
+	}else // equals 2
+	{
+		placementDiv.classList.add("silver");
+		placementDiv.innerText = "2nd";
+	}
+	console.log("Type of placementDiv: " + typeof placementDiv);
+
+	return placementDiv;
+}
+
+/**
+ * prints to console and exits out of  
+ * @param {string} errorString printed out to the console
+ */
+function raiseError(errorString)
+{
+	console.log(`Error: ${errorString}`);
 }
