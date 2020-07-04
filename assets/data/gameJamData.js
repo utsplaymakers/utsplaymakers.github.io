@@ -13,9 +13,9 @@ const gameJams = [
 		games: [
 			{
 				itchioLink: "https://fysho.itch.io/boom-mine",
-				embedCode: 597149, 
+				embedCode: 597149,
 				place: 1,
-				description: ""
+				description: "Boom Mine by James Ryan, Razin Agida Kaharuba, Roy Fu"
 			},
 			{
 				itchioLink: "https://delcanprobably.itch.io/rare-robots",
@@ -30,7 +30,7 @@ const gameJams = [
 				description: ""
 			},
 			{
-				itchioLink: "",
+				itchioLink: "https://gastricsparrow.itch.io/millstone-mining-manager",
 				embedCode: 597152,
 				place: 0,
 				description: ""
@@ -38,7 +38,3 @@ const gameJams = [
 		]
 	},
 ]
-
-/*
-	Vanilla JS does not support client side json file imports for security reasons
-*/
