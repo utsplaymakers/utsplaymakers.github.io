@@ -95,8 +95,7 @@ function generateGameView(game) {
 	// create content div and iframe 
 	let iframeElement = document.createElement("iframe");
 	let anchorTag = document.createElement("a");
-	anchorTag.setAttribute("href", game.itchioLink);
-	anchorTag.innerText = game.description;
+	anchorTag.setAttribute("href", game.itchioLink); // this anchor tag probably doesn't need to exist
 	iframeElement.appendChild(anchorTag);
 
 	let contentDiv = document.createElement("div");
@@ -110,7 +109,6 @@ function generateGameView(game) {
 
 	// complete the iframe element
 	iframeElement.classList.add("game-iframe");
-
 	const itchioEmbedURL = `https://itch.io/embed/${game.embedCode}`;
 	iframeElement.setAttribute("src", itchioEmbedURL);
 
