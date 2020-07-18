@@ -21,17 +21,22 @@ body {
 .hero-background {
     overflow: hidden;
     position: relative;
-    background: rgb(218, 82, 82);
-    /* background: -webkit-linear-gradient(117deg, rgb(218, 100, 82), rgb(165, 51, 23));
-    background: linear-gradient(117deg, rgb(218, 100, 82), rgb(165, 51, 23));
-    background: -webkit-radial-gradient(rgb(218, 100, 82), rgb(165, 51, 23));
-    background: radial-gradient(rgb(218, 100, 82), rgb(165, 51, 23)); */
+    height: 690px;
+    /* background: rgb(218, 82, 82); */
+    background: -webkit-linear-gradient(117deg, rgb(240, 96, 96), rgb(122, 23, 23));
+    background: linear-gradient(117deg, rgb(240, 96, 96), rgb(122, 23, 23));
+    background: -webkit-radial-gradient(rgb(240, 96, 96), rgb(122, 23, 23));
+    background: radial-gradient(rgb(240, 96, 96), rgb(122, 23, 23));
 }
 
 .secondary-background {
     overflow: hidden;
     position: relative;
-    background: rgb(218, 82, 82);
+    /* background: rgb(218, 82, 82); */
+    background: -webkit-linear-gradient(117deg, rgb(240, 96, 96), rgb(185, 59, 59));
+    background: linear-gradient(117deg, rgb(240, 96, 96), rgb(185, 59, 59));
+    background: -webkit-radial-gradient(rgb(240, 96, 96), rgb(185, 59, 59));
+    background: radial-gradient(rgb(240, 96, 96), rgb(185, 59, 59));
 }
 
 .bold {
@@ -153,10 +158,11 @@ body {
 }
 
 .logos-section {
-    background-color: rgba(217, 218, 218, 0.945);
+    background-color: rgba(228, 206, 206, 0);
+    /* z-index: 9; */
     text-align: center;
-    padding: 20px;
-    padding-bottom: 30px;
+    padding: 15px;
+    padding-bottom: 20px;
 }
 
 .logos {
@@ -242,6 +248,7 @@ body {
     max-width: 1400px;
     margin: auto;
     overflow: hidden;
+    background: rgb(243, 241, 241);
 
 }
 
@@ -510,7 +517,7 @@ ul {
 
 .social-link-txt {
     padding: 0 12px 0 12px;
-    color: black;
+    color: rgb(0, 0, 0);
 }
 
 .darken { filter: brightness(0.1); }
@@ -518,4 +525,14 @@ ul {
 .strips {
     position: absolute;
     max-width: 1280px;
+}
+
+.footer-elem-left {
+    display: inline-block;
+    color:white;
+}
+
+.footer-elem-right {
+    color: white;
+    float: right;
 }
