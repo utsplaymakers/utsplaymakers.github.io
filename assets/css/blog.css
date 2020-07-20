@@ -16,6 +16,10 @@
 	flex-direction: row;
 }
 
+.blog-preview-content img {
+	width: 100%
+}
+
 .blog-preview-content p {
 	text-align: center;
 }

@@ -5,7 +5,7 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<div>
-			<title>Playmakers</title>
+			<title>Playmakers | Games</title>
 		</div>
 		<meta name="Nova theme" content="width=device-width, initial-scale=1" />
 		<link
@@ -26,6 +26,8 @@
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="assets/css/style.css" />
+		<link rel="stylesheet" href="assets/css/navbar.css" />
+		<link rel="stylesheet" href="assets/css/responsive.css" />
 		<link rel="stylesheet" href="assets/css/portfolio.css" />
 
 		<link
@@ -35,29 +37,58 @@
 	</head>
 
 	<body>
-		<div class="hero-background">
-			<div class="playmakers-logo">
-				<a href="./index.html"
-					><img
-						src="assets/images/logo.svg"
-						alt="Back to website"
-						class="logo-link"
-				/></a>
+		<div class="secondary-background">
+	
+			<div class="navbar" id="navbar">
+				<div class="header">
+					<a class="logo" href="./index.html"> <img style="width:250%" src="assets/images/logo.svg"/></a>
+					<div class="header-right">
+						<a class="navbar-item" href="./calendar.html">Events</a>
+						<a class="navbar-item" href="./games.html">Games</a>
+						<a class="navbar-item" href="./blog.html">Blog</a>
+						<!-- <a class="navbar-item" href="#team">Team</a> -->
+					</div> 
+				</div>
 			</div>
+			<!-- </div> -->
 
+		<div class="hero-container">
 			<div class="text-center">
 				<h1><b>GAMES SHOWCASE</b></h1>
 				<!-- <p>Description</p> -->
 			</div>
 
 			<section id="game-jams"></section>
-
-			<div class="content">
-				<!-- <h3>Some Other Work</h3> -->
-				<p>© UTS Playmakers 2020</p>
+		</div>
+			<!-- Footer
+			================================================== -->
+			<div class="footer">
+					<div class="row">
+						<div class="footer-elem-left">
+							<p>© UTS Playmakers 2020</p>	
+						</div>
+						<div class="col-sm footer-elem-right">
+							<div class="social-links">
+								<a href="https://twitter.com/utsplaymakers"> <img class="social-link"
+																				src="assets/images/twitter.svg"/> </a>
+								<a href="https://discord.gg/UQzHyH">
+									<img class="social-link" style="width: 36px"
+																				src="assets/images/discord.svg"/></a>
+								<a href="https://instagram.com/uts_playmakers"> <img class="social-link" style="width: 30px"
+																				src="assets/images/instagram.svg"/> </a>
+								<a href="https://www.facebook.com/utsplaymakers"> <img
+										src="assets/images/facebook.svg"/> </a>
+							</div>
+							<!--social-links-->
+						</div>
+						<!--social-links-parent-->
+					</div>
+					<!--row-->
 			</div>
+			<!--footer-->
 		</div>
 		<script src="./assets/data/gameJamData.js"></script>
 		<script src="./assets/js/loadgames.js"></script>
+		<script src="./assets/js/navbar.js"></script>
 	</body>
 </html>

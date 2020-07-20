@@ -4,24 +4,25 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-.header-right {
-    display: none;
-}
-
 .navbar-item {
     color: #ffffff;
-    padding: 10px;
+    /* height: 50px; */
+    margin-right: 6px;
+    text-decoration: none;
+    /* background: rgba(107, 24, 24, 0.3); */
 }
 
 .navbar-item:hover {
-    color: #58d5f7;
+    color: #f75858;
     text-decoration: none;
+    background: rgba(184, 61, 61, 0.3);
+    /* background: rgba(54, 28, 16, 0.3); */
 }
 
 .hero-background {
     overflow: hidden;
     position: relative;
-    height: 690px;
+    max-height: 590px;
     /* background: rgb(218, 82, 82); */
     background: -webkit-linear-gradient(117deg, rgb(240, 96, 96), rgb(122, 23, 23));
     background: linear-gradient(117deg, rgb(240, 96, 96), rgb(122, 23, 23));
@@ -33,10 +34,10 @@ body {
     overflow: hidden;
     position: relative;
     /* background: rgb(218, 82, 82); */
-    background: -webkit-linear-gradient(117deg, rgb(240, 96, 96), rgb(185, 59, 59));
-    background: linear-gradient(117deg, rgb(240, 96, 96), rgb(185, 59, 59));
-    background: -webkit-radial-gradient(rgb(240, 96, 96), rgb(185, 59, 59));
-    background: radial-gradient(rgb(240, 96, 96), rgb(185, 59, 59));
+    background: -webkit-linear-gradient(117deg, rgb(240, 96, 96), rgb(167, 47, 47));
+    background: linear-gradient(117deg, rgb(240, 96, 96), rgb(167, 47, 47));
+    background: -webkit-radial-gradient(rgb(240, 96, 96), rgb(167, 47, 47));
+    background: radial-gradient(rgb(240, 96, 96), rgb(167, 47, 47));
 }
 
 .bold {
@@ -47,12 +48,34 @@ body {
     font-weight: 300;
 }
 
-.header {
-    padding-top: 35px;
-    width: 100%;
-    height: 100px;
+.hero-container {
+    margin: 60px;
+    margin-top: 100px;
+}
+
+.hero-column {
+    color: #fff;
+    /* text-align: center; */
+    margin: 10px;
+    height: 100%;
     position: relative;
-    z-index: 999;
+}
+
+.hc-mid {
+    max-width: 30%;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+}
+
+.hc-left {
+    float: left;
+    width: 30%;
+}
+
+.hc-right {
+    float: right;
+    width: 25%;
 }
 
 .logo {
@@ -61,10 +84,10 @@ body {
     padding-top: 5px;
 }
 
-.header-btn {
-    background-color: #0ABCEB;
+/* .header-btn {
+    background-color: #dd4747;
     border-radius: 10px;
-    border: #0ABCEB;
+    border: #dd4747;
     float: right;
     width: 195px;
     height: 51px;
@@ -72,20 +95,20 @@ body {
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
     margin-top: -10px;
-}
+} */
 
-.header-btn:hover {
+/* .header-btn:hover {
     background-color: #58d5f7;
     color: white;
     border-radius: 20px;
     -webkit-box-shadow: -1px 9px 46px -17px rgba(43, 43, 43, 1);
     -moz-box-shadow: -1px 9px 46px -17px rgba(43, 43, 43, 1);
     box-shadow: -1px 9px 46px -17px rgba(43, 43, 43, 1);
-}
+} */
 
 .hero {
     position: relative;
-    z-index: 999;
+    /* z-index: 999; */
     padding-bottom: 60px;
 }
 
@@ -110,10 +133,6 @@ body {
     padding-bottom: 35px;
 }
 
-.hero-right {
-    color: #fff;
-    text-align: center;
-}
 
 .ipad {
     display: none;
@@ -150,19 +169,11 @@ body {
     text-align: center;
 }
 
-.header-running-text {
-    text-align: center;
-    max-width: 287px;
-    line-height: 1.5;
-    margin: auto;
-}
-
 .logos-section {
-    background-color: rgba(228, 206, 206, 0);
+    background-color: #222222;
     /* z-index: 9; */
     text-align: center;
-    padding: 15px;
-    padding-bottom: 20px;
+    padding: 10px;
 }
 
 .logos {
@@ -363,9 +374,9 @@ ul {
 }
 
 .plan-btn {
-    background-color: #0ABCEB;
+    background-color: #dd4747;
     border-radius: 10px;
-    border: #0ABCEB;
+    border: #dd4747;
     width: 164px;
     height: 51px;
     color: white;
@@ -517,7 +528,7 @@ ul {
 
 .social-link-txt {
     padding: 0 12px 0 12px;
-    color: rgb(0, 0, 0);
+    color: white;
 }
 
 .darken { filter: brightness(0.1); }
@@ -535,4 +546,53 @@ ul {
 .footer-elem-right {
     color: white;
     float: right;
+}
+
+.off-white {
+    background: #F8F9F9;
+}
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width: 333px) {
+
+    .hc-left {
+        display: block;
+        float: top;
+        text-align: center;
+        width: 100%;
+    }
+
+    .header-headline {
+        text-align: center;
+    }
+    
+    .header-running-text {
+        text-align: center;
+        line-height: 1.5;
+        /* margin: auto; */
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .hc-mid {
+        display: inline-block;
+    }
+    
+    .hc-left {
+        display: inline-block; 
+        width: 30%;
+        text-align: left;
+    }
+    
+    .header-headline {
+        text-align: left;
+    }
+
+    .header-running-text {
+        text-align: left;
+        line-height: 1.5;
+        padding-right: 60px;
+        /* margin: auto; */
+    }
 }
