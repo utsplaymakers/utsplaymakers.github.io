@@ -1,3 +1,6 @@
+/* ALL STYLES HERE ARE FOR THE GAME.h */
+
+
 * {
 box-sizing: border-box;
 }
@@ -20,7 +23,7 @@ body {
 h1 {
     color: #111111;
     text-align: center;
-    font-size: 120px;
+    font-size: 60px;
 }
 
 h2 {
@@ -121,11 +124,12 @@ a:hover {
 }
 
 .theme-desc {
+    color: #ffd2d2;
     font-size: large;
-    font-weight: bold;
     text-align: center;
 }
 
 .desc {
     text-align: center;
+    color: #ffd2d2;
 }

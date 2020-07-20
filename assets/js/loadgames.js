@@ -27,7 +27,7 @@ function renderHeaderElements(gameJam) {
 
 	anchorTag.setAttribute("href", gameJam.linkToGames);
 	anchorTag.setAttribute("target", "_blank");
-	anchorTag.innerText = gameJam.title;
+	anchorTag.innerHTML = gameJam.title;
 
 	// append the anchor to the header 
 	h2.appendChild(anchorTag);
@@ -36,19 +36,23 @@ function renderHeaderElements(gameJam) {
 
 	// render following p tags
 	let pTheme = document.createElement("p");
+	let pDate = document.createElement("p");
 	let pDescription = document.createElement("p");
 
 	// add necessary classes/styling
 	pTheme.classList.add("theme-desc");
+	pDate.classList.add("theme-desc");
 	pDescription.classList.add("desc");
 
 	// set text content 
-	pTheme.innerText = gameJam.theme;
-	pDescription.innerText = gameJam.description;
+	pTheme.innerHTML = "Theme: <strong>" + gameJam.theme + "</strong>";
+	pDate.innerHTML = "Date: <strong>" + gameJam.date + "</strong>";
+	pDescription.innerHTML = gameJam.description;
 
 	// add p tags to gamejam section
 
 	root.appendChild(pTheme);
+	root.appendChild(pDate);
 	root.appendChild(pDescription);
 
 }
@@ -129,13 +133,13 @@ function generatePlacementElement(place, iframe) {
 	placementDiv.classList.add("tab");
 	if (place === 1) {
 		placementDiv.classList.add("golden");
-		placementDiv.innerText = "1st";
+		placementDiv.innerHTML = "1st";
 		iframe.classList.add("golden");
 
 	} else // equals 2
 	{
 		placementDiv.classList.add("silver");
-		placementDiv.innerText = "2nd";
+		placementDiv.innerHTML = "2nd";
 		iframe.classList.add("silver");
 	}
 

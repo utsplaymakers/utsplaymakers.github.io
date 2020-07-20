@@ -1,23 +1,20 @@
 /* Small Devices, Tablets */
-
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 333px) {
 
     .header-right {
-        display: block;
+        display: inline-block;
         float: right;
-        padding: 6px 20px;
+        padding: 6px 6px;
     }
 
     .header-headline {
-        text-align: left;
-        max-width: 380px;
-        padding-top: 75px;
+        /* max-width: 380px; */
+        /* padding: 10px 0px; */
     }
 
     .header-running-text {
         line-height: 30px;
         margin: 0;
-        text-align: left;
     }
 
     .hero {
@@ -29,9 +26,9 @@
         margin-bottom: 30px;
     }
 
-    .hero-right {
+    /* .hero-right {
         text-align: left;
-    }
+    } */
 
     .ipad {
         display: block;
@@ -48,12 +45,11 @@
     }
 
     .ipad-screen {
-        display: block;
+        display: inline-block;
+        float:left;
         position: relative;
-        padding-bottom: 0px;
-        margin-top: 20px;
-        right: 200px;
-        width: 160%;
+        /* right: 200px; */
+        width: 100%;
     }
 
     .feature-section {
@@ -116,10 +112,5 @@
 
 /* Medium Devices, Desktops */
 
-@media only screen and (min-width: 992px) {
-}
-
-/* Large Devices, Wide Screens */
-
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 768px) {
 }

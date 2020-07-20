@@ -8,9 +8,66 @@
 
 const gameJams = [
 	{
-		title: "Monthly Jam (27 - 29 Mar 2020)",
+		title: "Gaming Geek Week Jam",
+		linkToGames: "https://itch.io/jam/gaming-geek-week-jam",
+		theme: "It's [INSERT GAME] but [INSERT TWIST]",
+		date: "5 - 10 Jul 2020",
+		description: "In this collaborative event with Gamer's Guild and anime@UTS, participants are asked to take inspiration from an existing game and add one of five twists: \"everything hurts\" / \"you gotta go fast\" / \"there's an equal, opposite reaction\" / \"to obtain something, something of equal value must be lost\" / \"no one will blame you for giving up\".",
+		games: [
+			{
+				itchioLink: "https://hermitpal.itch.io/perceptions",
+				embedCode: 692399,
+				place: 1
+			},
+			{
+				itchioLink: "https://whitericee.itch.io/hextype",
+				embedCode: 692489,
+			},
+			{
+				itchioLink: "https://agk.itch.io/fragmented",
+				embedCode: 692481
+			},
+			{
+				itchioLink: "https://designdialectics.itch.io/painful-breakout",
+				embedCode: 691858
+			}
+		]
+	},
+	{
+		title: "Monthly Jam: May",
+		linkToGames: "https://itch.io/jam/monthly-jam-april-2020",
+		theme: "Limited Capacity",
+		date: "22 - 24 May 2020",
+		description: "Despite busy uni schedules, our Monthly Game Jam is still on! This time we used a game jam theme generator.",
+		games: [
+			{
+				itchioLink: "https://jtama.itch.io/nest-robbers",
+				embedCode: 651339
+			}
+		]
+	},
+	{
+		title: "Monthly Jam: April",
+		linkToGames: "https://itch.io/jam/monthly-jam-april-2020",
+		theme: "Building Imagination",
+		date: "24 - 26 Apr 2020",
+		description: "Another installment of our monthly game jam, this time with two randomised words combined to create the theme!",
+		games: [
+			{
+				itchioLink: "https://edisu.itch.io/frigid",
+				embedCode: 625071
+			},
+			{
+				itchioLink: "https://gastricsparrow.itch.io/eat-the-broom",
+				embedCode: 624407
+			}
+		]
+	},
+	{
+		title: "Monthly Jam: March",
 		linkToGames: "https://itch.io/jam/monthly-jam-march-2020",
 		theme: "Liquid / Rare / Motivation / Ritzy",
+		date: "27 - 29 Mar 2020",
 		description: "In the first of our monthly game jams held on our Discord, our gamedevs compete to make the best game out of four randomly generated words!",
 		games: [
 			{
@@ -31,9 +88,10 @@ const gameJams = [
 		]
 	},
 	{
-		title: "Social Distancing Jam (17 - 22 Mar 2020)",
+		title: "Social Distancing Jam",
 		linkToGames: "https://itch.io/jam/social-distancing",
 		theme: "Toilet Paper",
+		date: "17 - 22 Mar 2020",
 		description: "An impromptu, casual jam hosted on our Discord at the beginning of COVID-19 quarantine period, with a very topical theme!",
 		games: [
 			{
@@ -55,9 +113,10 @@ const gameJams = [
 		]
 	},
 	{
-		title: "Interactive Media Jam (27 - 29 Jul 2019)",
+		title: "Interactive Media Jam",
 		linkToGames: "https://itch.io/jam/interactive-media-jam",
 		theme: "Merging the Physical and Digital",
+		date: "27 - 29 Jul 2019",
 		description: "Our first Interactive Media jam - branching beyond games to showcase a variety of VR, AR, and Arduino based experiences in the submissions.",
 		games: [
 			{

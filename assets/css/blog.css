@@ -1,0 +1,25 @@
+/* 
+	ALL STYLING FOR blog.html and blog entries
+*/
+
+
+.blog-preview {
+
+}
+
+.blog-preview-metadata {
+	display: inline;
+}
+
+.blog-preview-content {
+	display: flex;
+	flex-direction: row;
+}
+
+.blog-preview-content img {
+	width: 100%
+}
+
+.blog-preview-content p {
+	text-align: center;
+}
