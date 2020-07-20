@@ -151,7 +151,7 @@ body {
     width: 210px;
     height: 51px;
     color: white;
-    margin: 30px auto;
+    margin: 5px auto;
 }
 
 .hero-btn:hover {
@@ -287,6 +287,8 @@ body {
 .imac-screen {
     padding-top: 60px;
     padding-bottom: 40px;
+    min-width: 60%;
+    background: white;
 }
 
 .macbook {
@@ -570,7 +572,7 @@ ul {
     .header-running-text {
         text-align: center;
         line-height: 1.5;
-        /* margin: auto; */
+        margin-bottom: 40px;
     }
 }
 
@@ -593,6 +595,7 @@ ul {
         text-align: left;
         line-height: 1.5;
         padding-right: 60px;
+        padding-bottom: 40px;
         /* margin: auto; */
     }
 }

@@ -26,6 +26,7 @@
 		/>
 		<link rel="stylesheet" href="assets/css/style.css" />
 		<link rel="stylesheet" href="assets/css/navbar.css" />
+		<link rel="stylesheet" href="assets/css/calendar.css" />
 		<link rel="stylesheet" href="assets/css/responsive.css" />
 		<link rel="stylesheet" href="assets/css/portfolio.css" />
 
@@ -47,10 +48,14 @@
         </div>
     </div>
 
+    
     <div class="secondary-background">
-        <div style="text-align: center; margin-top: 60px">
-            <img style="max-width:60%" src="assets/images/eventcalendar-postvirus-01.png" style="max-width:100%">
+        <div class="text-center" style="margin-top: 90px; margin-bottom: -50px;">
+            <h1><b>EVENTS</b></h1>
         </div>
+        <br><br>
+
+        <div id="event-calendar" class="event-list"> </div>
     </div>
 
     <!-- Footer
@@ -80,5 +85,7 @@
     </div>
     <!--footer-->
 
-	<script src="./assets/js/navbar.js"></script>
+    <script src="./assets/js/navbar.js"></script>
+    <script src="./assets/data/eventData.js"></script>
+	<script src="./assets/js/loadevents.js"></script>
 </body>
