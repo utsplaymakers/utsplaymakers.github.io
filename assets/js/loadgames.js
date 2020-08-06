@@ -10,17 +10,21 @@ gameJams.forEach(render); // for each game jam entry, render on games.html. vari
  * @param {object} gameJam holds all necessary game jam data for rendering an
  */
 function render(gameJam) {
+	let jam = document.createElement("div");
+	jam.classList.add("game-jam");
+	jam.classList.add("off-white");
+
 	// render header elements header and p tags
-	renderHeaderElements(gameJam);
+	renderHeaderElements(gameJam, jam);
 	// render the individual game entries
-	renderGameEntryElements(gameJam.games);
+	renderGameEntryElements(gameJam.games, jam);
 }
 
 /**
  * render header and paragraph elements 
  * @param {object} gameJam individual game jam 
  */
-function renderHeaderElements(gameJam) {
+function renderHeaderElements(gameJam, jam) {
 	let h2 = document.createElement("h2");
 	let anchorTag = document.createElement("a");
 
@@ -51,17 +55,18 @@ function renderHeaderElements(gameJam) {
 
 	// add p tags to gamejam section
 
-	root.appendChild(pTheme);
-	root.appendChild(pDate);
-	root.appendChild(pDescription);
+	jam.appendChild(pTheme);
+	jam.appendChild(pDate);
+	jam.appendChild(pDescription);
 
+	root.appendChild(jam);
 }
 
 /**
  * Appends each individual game entry to root
  * @param {Array} gameEntries holds all game entries for the specific game jam
  */
-function renderGameEntryElements(gameEntries) {
+function renderGameEntryElements(gameEntries, jam) {
 	if (gameEntries.length === 0) {
 		raiseError("No number game entry found in renderGameEntryElements");
 		return;
@@ -87,7 +92,7 @@ function renderGameEntryElements(gameEntries) {
 	rowDiv.appendChild(columnOne);
 	rowDiv.appendChild(columnTwo);
 
-	root.appendChild(rowDiv);
+	jam.appendChild(rowDiv);
 }
 
 /**

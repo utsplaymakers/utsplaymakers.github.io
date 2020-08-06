@@ -11,7 +11,7 @@ body {
 /* Center website */
 .main {
     max-width: 600px;
-    margin: auto;
+    margin: 0px 100px;
 }
 
 .playmakers-logo {
@@ -34,9 +34,13 @@ h2 {
     text-align: center
 }
 
+.game-jam {
+    padding: 25px 0px;
+    margin: -10px 0px 40px;
+}
+
 .row {
-    margin-left: 60px;
-    margin-right: 60px;
+    margin: 0px 60px;
 }
 
 /* Add padding BETWEEN each column (if you want) */
@@ -116,20 +120,23 @@ h2 {
 }
 
 a {
-    color: #f0a3a3;
+    color: #f1998e
 }
 
 a:hover {
-    color: #ffffff
+    color: #fff
 }
 
 .theme-desc {
-    color: #ffd2d2;
+    /* padding: 0px 70px; */
+    line-height: 20px;
+    color: #111; /* #ffd2d2; */
     font-size: large;
     text-align: center;
 }
 
 .desc {
-    text-align: center;
-    color: #ffd2d2;
+    padding: 12px 70px;
+    text-align: justify;
+    color: #111; /* #ffd2d2; */
 }
