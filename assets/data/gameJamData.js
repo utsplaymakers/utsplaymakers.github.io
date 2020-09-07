@@ -8,6 +8,23 @@
 
 const gameJams = [
 	{
+		title: "Monthly Jam: August",
+		linkToGame: "https://itch.io/jam/monthly-jam-august-2020/entries",
+		theme: "Repair | Time | Lightspeed",
+		date: "28 - 30 Aug 2020",
+		description: "Halfway through the semester and things are speeding up! Entrants had an option of three keywords and chose two for their entry",
+		games: [
+			{
+				itchioLink: "https://voidawake.itch.io/count-down",
+				embedCode: 744592,
+			},
+			{
+				itchioLink: "https://ibisgamesandentertainment.itch.io/rift-riders",
+				embedCode: 744594
+			}
+		]
+	},
+	{
 		title: "Gaming Geek Week Jam",
 		linkToGames: "https://itch.io/jam/gaming-geek-week-jam",
 		theme: "It's [INSERT GAME] but [INSERT TWIST]",
