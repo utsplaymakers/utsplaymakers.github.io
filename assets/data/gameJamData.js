@@ -8,6 +8,30 @@
 
 const gameJams = [
 	{
+		title: "The Jam Before Christmas",
+		linkToGame: "https://itch.io/jam/the-jam-before-christmas/entries",
+		theme: "Unconvential Solutions | Insect Colony | Easter",
+		date: "17 - 18 Dec 2020",
+		description: "We end the year with a sweet 2 day game jam hosted in-person and online",
+		games: [
+			{
+				itchioLink: "https://kyle-hammer.itch.io/ant-king",
+				embedCode: 859306,
+				place: 1,
+			},
+			{
+				itchioLink: "https://usernamepassword.itch.io/egg-factory",
+				embedCode: 859349,
+				place: 2,
+			},
+			{
+				itchioLink: "https://gastricsparrow.itch.io/the-sting",
+				embedCode: 859353,
+				place: 3,
+			}
+		]
+	},
+	{
 		title: "Monthly Jam: August",
 		linkToGame: "https://itch.io/jam/monthly-jam-august-2020/entries",
 		theme: "Repair | Time | Lightspeed",
