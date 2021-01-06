@@ -10,7 +10,7 @@ const gameJams = [
 	{
 		title: "The Jam Before Christmas",
 		linkToGame: "https://itch.io/jam/the-jam-before-christmas/entries",
-		theme: "Unconvential Solutions | Insect Colony | Easter",
+		theme: "Unconventional Solutions | Insect Colony | Easter",
 		date: "17 - 18 Dec 2020",
 		description: "We end the year with a sweet 2 day game jam hosted in-person and online",
 		games: [

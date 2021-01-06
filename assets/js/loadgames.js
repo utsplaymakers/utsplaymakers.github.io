@@ -140,12 +140,14 @@ function generatePlacementElement(place, iframe) {
 		placementDiv.classList.add("golden");
 		placementDiv.innerHTML = "1st";
 		iframe.classList.add("golden");
-
-	} else // equals 2
-	{
+	} else if (place === 2) {
 		placementDiv.classList.add("silver");
 		placementDiv.innerHTML = "2nd";
 		iframe.classList.add("silver");
+	} else if (place === 3) {
+		placementDiv.classList.add("bronze");
+		placementDiv.innerHTML = "3rd";
+		iframe.classList.add("bronze");
 	}
 
 	return placementDiv;
