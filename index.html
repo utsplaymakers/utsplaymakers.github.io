@@ -112,11 +112,37 @@
 
             <h2 class="imac-section-header light">RECENT ACTIVITY</h2>
     
-            <iframe 
+            <iframe id="fb-posts"
                 src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Futsplaymakers&tabs=timeline&width=700&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false" 
                 width="500" height="500" style="border:none;overflow:visible" 
                 scrolling="yes" frameborder="0" allowfullscreen="true" 
                 allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+
+            <script >
+                let iframe = document.getElementById("fb-posts");
+                let seconds = 0;
+
+                function checkFBPosts() {
+                    let doc = iframe.contentDocument;
+
+                    // Check if we have finished loading
+                    if (!doc) {
+                        return;
+                    }
+
+                    // If we have surpassed some amount of time, assumed that the iframe is blocked. Browsers like firefox do this
+                    if (seconds > 4) {
+                        var errorEl = document.createElement("b");
+                        errorEl.innerHTML = "Facebook Widget cannot be shown, Has it been blocked by the browser?  :("
+                        iframe.replaceWith(errorEl);
+                    }
+
+                    seconds += 0.1;
+                    setTimeout(checkFBPosts, 100);
+                }
+
+                checkFBPosts();
+            </script>
         </div>
     
         <div class="white-section-content col-sm-5">
