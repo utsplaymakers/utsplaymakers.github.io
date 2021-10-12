@@ -1,0 +1,91 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Playmakers</title>
+    <meta name="Nova theme" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png"/>
+
+    <!-- Bootstrap 5 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+    <!-- Custom Stylesheet stuff -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css"/>
+    <link rel="stylesheet" href="assets/css/navbar.css"/>
+    <link rel="stylesheet" href="assets/css/responsive.css"/>
+    <link rel="stylesheet" href="assets/css/monstermash.css"/>
+
+    <!-- Animejs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div style="position: absolute; width: 100%; height: 100%;">
+        
+        <div class="d-flex justify-content-center my-5">
+            <div class="video-container">
+                <video id="main-video" preload autoplay muted style="pointer-events: none;" disablePictureInPicture>
+                    <source src="assets/media/monstermash/welcome.mp4" type="video/mp4">
+                    Your browser does not support the video mp4 :(
+                </video>
+            </div>
+
+            <div class="video-container">
+                <video id="menu-video" preload autoplay muted loop style="pointer-events: none;" disablePictureInPicture>
+                    <source src="assets/media/monstermash/uts_broadway.mp4" type="video/mp4">
+                    Your browser does not support the video mp4 :(
+                </video>
+
+                <div class="video-shadow"></div>
+            </div>
+        </div>
+
+        <div class="container post-video">
+
+            <div class="d-flex justify-content-center">
+                <img id="menu-title" src="assets/images/monstermash/title.png"/>
+            </div>
+
+            <div class="row justify-content-around">
+
+                <div class="col-2">
+                    <button id="week1" class="btn btn-weeks">
+                        <img src="assets/images/monstermash/WEEK1.png"/>
+                    </button>
+                </div>
+
+                <div class="col-2">
+                    <button id="week2" class="btn btn-weeks">
+                        <img src="assets/images/monstermash/WEEK2.png"/>
+                    </button>
+                </div>
+
+                <div class="col-2">
+                    <button id="week3" class="btn btn-weeks">
+                        <img src="assets/images/monstermash/WEEK3.png"/>
+                    </button>
+                </div>
+
+                <div class="col-2">
+                    <button id="week4" class="btn btn-weeks">
+                        <img src="assets/images/monstermash/WEEK4.png"/>
+                    </button>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+
+    <script src="assets/js/monstermash.js"></script>
+</body>
+
+</html>
