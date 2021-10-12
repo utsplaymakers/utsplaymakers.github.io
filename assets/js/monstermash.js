@@ -1,5 +1,6 @@
 let weekButtons = ["#week1", "#week2", "#week3", "#week4"];
 let activatedButtons = new Set();
+let menuVideoOpacity = 0.28;
 
 
 $(document).ready(function() {
@@ -56,15 +57,15 @@ function animateMenu() {
 
     tl.add({
         targets: "#menu-video",
-        opacity: ["0%", "28%"],
-        duration: 900,
+        opacity: [0, menuVideoOpacity],
+        duration: 1600,
         easing: "easeInOutBounce"
     }, 0);
 
     tl.add({
         targets: "#menu-title",
         scale: [1.8, 1],
-        duration: 1400
+        duration: 2100
     }, 0);
 
     tl.add({
@@ -84,4 +85,38 @@ function animateMenu() {
             begin: (anim) => activateButton(btn),
         }, "+=400");
     }
+
+    setTimeout(flickerMenu, 6200);
+    setInterval(flickerMenu, 9600);
+}
+
+function flickerMenu() {
+    let tl = anime.timeline({
+        easing: "easeInOutBounce",
+        duration: 50
+    });
+
+    tl.add({
+        targets: "#menu-video",
+        opacity: [menuVideoOpacity, 0.7]
+    });
+
+    for (let i = 0; i < 2; i++) {
+        tl.add({
+            targets: "#menu-video-container",
+            translateX: () => anime.random(-80, 80),
+            translateY: () => anime.random(-80, 80)
+        });
+
+        tl.add({
+            targets: "#menu-video-container",
+            translateX: 0,
+            translateY: 0
+        });
+    }
+
+    tl.add({
+        targets: "#menu-video",
+        opacity: [0.7, menuVideoOpacity]
+    });
 }
