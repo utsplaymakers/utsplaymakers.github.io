@@ -1,11 +1,14 @@
 
+@font-face {
+    font-family: NES;
+    src: url("/assets/fonts/pixel_nes.otf") format("opentype");
+    font-weight: bold;
+}
+
 body {
     background-color: black;
     overflow: hidden;
-}
-
-#main-video {
-    
+    user-select: none;
 }
 
 #menu-video {
@@ -33,11 +36,87 @@ body {
     object-fit: cover;
 }
 
+.btn-hide {
+    opacity: 0;
+}
+
+.btn-extra {
+    font-family: NES;
+    color: rgb(110, 0, 0);
+    font-size: 8pt;
+}
+
+.btn-extra:hover {
+    color: rgb(255, 0, 0);
+}
+
 .btn-weeks {
     opacity: 0;
+    font-family: NES;
+    color: rgb(145, 4, 4);
+    font-size: 24pt;
+}
+
+.btn-weeks:focus {
+    box-shadow: none;
+}
+
+.btn-weeks:hover {
+    color: rgb(145, 4, 4);
+}
+
+.btn-weeks-unlocked:hover {
+    color: rgb(255, 0, 0);
 }
 
 .btn-weeks > img {
     width: 100;
     object-fit: none;
+}
+
+.coming-soon {
+    font-family: NES;
+    color: #8b4d57;
+    opacity: 0.5;
+    font-size: 8pt;
+}
+
+.undraggable {
+    pointer-events: none;
+}
+
+@media screen and (max-width: 1000px) {
+    #main-video {
+        width: 768;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #main-video {
+        width: 500;
+    }
+
+    #menu-title {
+        width: 600;
+        height: 650;
+    }
+
+    body {
+        overflow: auto;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #main-video {
+        width: 300;
+    }
+
+    #menu-title {
+        width: 400;
+        height: 450;
+    }
+
+    body {
+        overflow: auto;
+    }
 }
