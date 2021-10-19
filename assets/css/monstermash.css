@@ -7,7 +7,7 @@
 
 body {
     background-color: black;
-    overflow: hidden;
+    overflow: auto;
     user-select: none;
 }
 
@@ -54,7 +54,7 @@ body {
     opacity: 0;
     font-family: NES;
     color: rgb(145, 4, 4);
-    font-size: 24pt;
+    font-size: 15pt;
 }
 
 .btn-weeks:focus {
@@ -82,6 +82,11 @@ body {
 }
 
 .undraggable {
+    pointer-events: none;
+}
+
+.btn-disabled {
+    cursor: none;
     pointer-events: none;
 }
 

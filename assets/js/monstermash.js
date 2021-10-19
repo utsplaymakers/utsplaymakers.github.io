@@ -1,4 +1,9 @@
-let weekButtons = ["#week1", "#week2", "#week3", "#week4"];
+let weekButtons = [
+    { target: "#week1", unlockDate: new Date(2020, 11, 1) }, 
+    { target: "#week2", unlockDate: new Date(2020, 11, 4) }, 
+    { target: "#week3", unlockDate: new Date(2020, 11, 21) },
+    { target: "#week4", unlockDate: new Date(2020, 11, 26) }
+];
 let activatedButtons = new Set();
 let unlockedButtons = new Set();
 let menuVideoOpacity = 0.28;
@@ -16,26 +21,30 @@ $(document).ready(function() {
         localStorage.removeItem(skipIntroKey);
         location.reload();
     });
+    setButton("#replay-intro", false);
     
     $("#main-video").on("ended", animateMenu);
 
 
     // Unlock required buttons
-    unlockedButtons.add(weekButtons[0]);
+    // unlockedButtons.add(weekButtons[0]);
+    // unlockedButtons.add(weekButtons[1]);
+    // unlockedButtons.add(weekButtons[2]);
+    // unlockedButtons.add(weekButtons[3]);
 
-
-    
     // Setup all the buttons
     for (let btn of weekButtons) {
-        let btnEl = $(btn);
+        let btnEl = $(btn.target);
 
         if (!unlockedButtons.has(btn)) {
-            let comingSoonEl = '<div class="coming-soon">Coming soon...</div>';
+            let endingString = btn.unlockDate ? ` ${btn.unlockDate.getDate()}/${btn.unlockDate.getMonth()}` : "...";
+            let comingSoonEl = `<div class="coming-soon">Coming soon${endingString}</div>`;
             btnEl.append(comingSoonEl)
         } else {
             btnEl.toggleClass("btn-weeks-unlocked");
         }
         
+        setButton(btn.target, false);
         setupButtonAnimation(btn);
     }   
 });
@@ -43,29 +52,29 @@ $(document).ready(function() {
 function animateButton(btn, hovering) {
     if (!activatedButtons.has(btn)) return;
 
-    anime.remove(btn);
+    anime.remove(btn.target);
 
     if (unlockedButtons.has(btn)) {
         let toScale = hovering ? 1.1 : 1;
 
         anime({
-            targets: btn,
+            targets: btn.target,
             scale: toScale,
             opacity: 1,
             duration: 900,
         });
     } else {
-        let toColor = hovering ? "#d17d8b" : "#8b4d57";
+        let toColor = hovering ? "#ffc1cb" : "#8b4d57";
 
         anime({
-            targets: btn,
+            targets: btn.target,
             scale: 1,
             opacity: 1,
             duration: 900,
         });
 
         anime({
-            targets: `${btn} > .coming-soon`,
+            targets: `${btn.target} > .coming-soon`,
             color: toColor,
             duration: 900,
         });
@@ -73,15 +82,27 @@ function animateButton(btn, hovering) {
 }
 
 function setupButtonAnimation(btn) {
-    $(btn).hover(() => animateButton(btn, true));
-    $(btn).mouseleave(() => animateButton(btn, false));
+    $(btn.target).hover(() => animateButton(btn, true));
+    $(btn.target).mouseleave(() => animateButton(btn, false));
 }
 
 function activateButton(btn) {
     activatedButtons.add(btn);
+    setButton(btn.target, true);
 
-    if ($(btn + ":hover").length != 0) {
+    if ($(btn.target + ":hover").length != 0) {
         animateButton(btn, true);
+    }
+}
+
+function setButton(target, isEnabled) {
+    let el = $(target);
+    el.disabled = !isEnabled;
+
+    if (isEnabled) {
+        el.removeClass("btn-disabled");
+    } else {
+        el.addClass("btn-disabled");
     }
 }
 
@@ -122,16 +143,16 @@ function animateMenu() {
         targets: "#replay-intro",
         opacity: [0, 1],
         duration: 200,
-        easing: "linear"
+        easing: "linear",
+        begin: (anim) => setButton("#replay-intro", true)
     });
 
     // Buttons
     for (let btn of weekButtons) {
-
         tl.add({
-            targets: btn,
+            targets: btn.target,
             scale: [1.2, 1],
-            opacity: ["0%", "100%"],
+            opacity: [0, 1],
             duration: 600,
             begin: (anim) => activateButton(btn),
         }, "+=100");
