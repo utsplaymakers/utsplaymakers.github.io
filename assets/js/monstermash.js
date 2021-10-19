@@ -8,20 +8,25 @@ let activatedButtons = new Set();
 let unlockedButtons = new Set();
 let menuVideoOpacity = 0.28;
 let skipIntroKey = "skip_intro";
+let skipOverReplay = false;
 
 
 $(document).ready(function() {
     let shouldSkipIntro = localStorage.getItem(skipIntroKey);
 
     if (shouldSkipIntro) {
-        $("#main-video").get(0).currentTime = 37;
+        skipIntro();
     }
     
     $("#replay-intro").click(() => {
-        localStorage.removeItem(skipIntroKey);
-        location.reload();
+        if (!skipOverReplay) {
+            skipIntro();
+        }
+        else {
+            localStorage.removeItem(skipIntroKey);
+            location.reload();
+        }
     });
-    setButton("#replay-intro", false);
     
     $("#main-video").on("ended", animateMenu);
 
@@ -48,6 +53,10 @@ $(document).ready(function() {
         setupButtonAnimation(btn);
     }   
 });
+
+function skipIntro() {
+    $("#main-video").get(0).currentTime = 37;
+}
 
 function animateButton(btn, hovering) {
     if (!activatedButtons.has(btn)) return;
@@ -144,7 +153,10 @@ function animateMenu() {
         opacity: [0, 1],
         duration: 200,
         easing: "linear",
-        begin: (anim) => setButton("#replay-intro", true)
+        begin: (anim) => {
+            $("#replay-intro").text("Replay Intro");
+            skipOverReplay = true;
+        }
     });
 
     // Buttons
