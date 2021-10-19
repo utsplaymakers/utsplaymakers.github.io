@@ -134,7 +134,7 @@ function animateMenu() {
 
     tl.add({
         targets: "#menu-title",
-        opacity: ["0%", "100%"],
+        opacity: [0, 0.9],
         duration: 900,
         easing: "easeInOutBounce"
     }, 0);
