@@ -1,5 +1,5 @@
 let weekButtons = [
-    { target: "#week1", unlockDate: new Date(2020, 11, 1) }, 
+    { target: "#week1", unlockDate: new Date(2020, 11, 1), link: "https://devsledge.itch.io/monster-mash-week-1" }, 
     { target: "#week2", unlockDate: new Date(2020, 11, 4) }, 
     { target: "#week3", unlockDate: new Date(2020, 11, 21) },
     { target: "#week4", unlockDate: new Date(2020, 11, 26) }
@@ -41,12 +41,20 @@ $(document).ready(function() {
     for (let btn of weekButtons) {
         let btnEl = $(btn.target);
 
+        if (btn.link) {
+            unlockedButtons.add(btn);
+            btnEl.click(() => location.href = btn.link);
+        }
+
+        let dateString = `${btn.unlockDate.getDate()}/${btn.unlockDate.getMonth()}`;
+
         if (!unlockedButtons.has(btn)) {
-            let endingString = btn.unlockDate ? ` ${btn.unlockDate.getDate()}/${btn.unlockDate.getMonth()}` : "...";
-            let comingSoonEl = `<div class="coming-soon">Coming soon${endingString}</div>`;
+            let comingSoonEl = `<div class="coming-soon">On ${dateString}<br/> Coming soon....</div>`;
             btnEl.append(comingSoonEl)
         } else {
+            let dateEl = `<div class="coming-soon">On ${dateString}</div>`;
             btnEl.toggleClass("btn-weeks-unlocked");
+            btnEl.append(dateEl);
         }
         
         setButton(btn.target, false);
@@ -149,13 +157,16 @@ function animateMenu() {
     }, 0);
 
     tl.add({
-        targets: "#replay-intro",
+        targets: ".btn-extra",
         opacity: [0, 1],
         duration: 200,
         easing: "linear",
         begin: (anim) => {
             $("#replay-intro").text("Replay Intro");
             skipOverReplay = true;
+        },
+        complete: (anim) => {
+            $(".btn-extra").removeClass("btn-disable");
         }
     });
 

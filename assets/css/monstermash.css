@@ -42,6 +42,20 @@ body {
     opacity: 0;
 }
 
+.btn-disable {
+    pointer-events: none;
+}
+
+.link {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.link:hover {
+    color: inherit;
+    text-decoration: inherit;
+}
+
 .btn-extra {
     font-family: NES;
     color: rgb(110, 0, 0);
