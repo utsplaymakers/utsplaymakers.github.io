@@ -1,6 +1,6 @@
 let weekButtons = [
     { target: "#week1", unlockDate: new Date(2020, 11, 1), link: "https://devsledge.itch.io/monster-mash-week-1" }, 
-    { target: "#week2", unlockDate: new Date(2020, 11, 4) }, 
+    { target: "#week2", unlockDate: new Date(2020, 11, 4), link: "https://hermitpal.itch.io/kuchisake-onna-2" }, 
     { target: "#week3", unlockDate: new Date(2020, 11, 21) },
     { target: "#week4", unlockDate: new Date(2020, 11, 26) }
 ];
@@ -41,6 +41,7 @@ $(document).ready(function() {
     for (let btn of weekButtons) {
         let btnEl = $(btn.target);
 
+        // Unlock button if the link is available
         if (btn.link) {
             unlockedButtons.add(btn);
             btnEl.click(() => location.href = btn.link);
