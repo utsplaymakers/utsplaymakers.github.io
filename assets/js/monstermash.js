@@ -1,8 +1,8 @@
 let weekButtons = [
     { target: "#week1", unlockDate: new Date(2020, 11, 1), link: "https://devsledge.itch.io/monster-mash-week-1" }, 
     { target: "#week2", unlockDate: new Date(2020, 11, 4), link: "https://hermitpal.itch.io/kuchisake-onna-2" }, 
-    { target: "#week3", unlockDate: new Date(2020, 11, 21), link: "https://ayielin.itch.io/uts-underground" },
-    { target: "#week4", unlockDate: new Date(2020, 11, 26) }
+    { target: "#week3", unlockDate: new Date(2020, 12, 6), link: "https://ayielin.itch.io/uts-underground" },
+    { target: "#week4" }
 ];
 let activatedButtons = new Set();
 let unlockedButtons = new Set();
@@ -47,15 +47,21 @@ $(document).ready(function() {
             btnEl.click(() => location.href = btn.link);
         }
 
-        let dateString = `${btn.unlockDate.getDate()}/${btn.unlockDate.getMonth()}`;
+        if (btn.unlockDate == null) {
+            let comingSoonEl = `<div class="coming-soon">Coming soon....</div>`;
+            btnEl.append(comingSoonEl);
+        }
+        else {
+            let dateString = `${btn.unlockDate.getDate()}/${btn.unlockDate.getMonth()}`;
 
-        if (!unlockedButtons.has(btn)) {
-            let comingSoonEl = `<div class="coming-soon">On ${dateString}<br/> Coming soon....</div>`;
-            btnEl.append(comingSoonEl)
-        } else {
-            let dateEl = `<div class="coming-soon">On ${dateString}</div>`;
-            btnEl.toggleClass("btn-weeks-unlocked");
-            btnEl.append(dateEl);
+            if (!unlockedButtons.has(btn)) {
+                let comingSoonEl = `<div class="coming-soon">On ${dateString}<br/> Coming soon....</div>`;
+                btnEl.append(comingSoonEl);
+            } else {
+                let dateEl = `<div class="coming-soon">On ${dateString}</div>`;
+                btnEl.toggleClass("btn-weeks-unlocked");
+                btnEl.append(dateEl);
+            }
         }
         
         setButton(btn.target, false);
