@@ -52,7 +52,8 @@ $(document).ready(function() {
             btnEl.append(comingSoonEl);
         }
         else {
-            let dateString = `${btn.unlockDate.getDate()}/${btn.unlockDate.getMonth()}`;
+            let month = btn.unlockDate.getMonth() == 0 ? 12 : btn.unlockDate.getMonth();
+            let dateString = `${btn.unlockDate.getDate()}/${month}`;
 
             if (!unlockedButtons.has(btn)) {
                 let comingSoonEl = `<div class="coming-soon">On ${dateString}<br/> Coming soon....</div>`;
