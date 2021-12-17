@@ -207,6 +207,10 @@ const gameJams = [
 			{
 				itchioLink: "https://ayielin.itch.io/escape-from-building-11",
 				embedCode: 456843,
+			},
+			{
+				itchioLink: "https://daletgrant.itch.io/flux-break",
+				embedCode: 456841,
 			}
 		]
 	}
