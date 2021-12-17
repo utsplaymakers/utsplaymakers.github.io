@@ -8,6 +8,30 @@
 
 const gameJams = [
 	{
+		title: "Adaptive Jam",
+		linkToGame: "https://itch.io/jam/adaptive-jam/entries",
+		theme: "Adaptive",
+		date: "4-5 Sep 2021",
+		description: "A nice mid-year jam, the second game jam of the year. It was hosted online",
+		games: [
+			{
+				itchioLink: "https://radiantinferno.itch.io/prismorph",
+				embedCode: 1187197,
+				place: 1,
+			},
+			{
+				itchioLink: "https://devsledge.itch.io/unmasked",
+				embedCode: 1187331,
+				place: 2,
+			},
+			{
+				itchioLink: "https://dr-skittles.itch.io/blockout",
+				embedCode: 1186291,
+				place: 3,
+			}
+		]
+	},
+	{
 		title: "The Jam Before Christmas",
 		linkToGame: "https://itch.io/jam/the-jam-before-christmas/entries",
 		theme: "Unconventional Solutions | Insect Colony | Easter",
@@ -183,7 +207,7 @@ const gameJams = [
 			{
 				itchioLink: "https://ayielin.itch.io/escape-from-building-11",
 				embedCode: 456843,
-			},
+			}
 		]
 	}
 ]
