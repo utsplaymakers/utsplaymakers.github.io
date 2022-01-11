@@ -8,6 +8,46 @@
 
 const gameJams = [
 	{
+		title: "Monster Mash Game Jam",
+		linkToGame: "https://itch.io/jam/monster-mash-game-jam/entries",
+		theme: "HORROR, with one of the sub-themes: The only thing that matters | There’s always another way | Surface Level",
+		date: "16-17 Dec 2021",
+		description: "The jam from the monster mash collaboration hosted in-person with UTS animation guild and support from the UTS student engagement team",
+		games: [
+			{
+				itchioLink: "https://radiantinferno.itch.io/monster-mash-winery",
+				embedCode: 1321645,
+				place: 1,
+			},
+			{
+				itchioLink: "https://tobibob.itch.io/for-you",
+				embedCode: 1321598,
+				place: 2,
+			},
+			{
+				itchioLink: "https://hermitpal.itch.io/love-in-a-capsule",
+				embedCode: 1321635,
+				place: 2
+			},
+			{
+				itchioLink: "https://jaaamesey.itch.io/murder-on-the-bathurst-bullet",
+				embedCode: 1315159
+			},
+			{
+				itchioLink: "https://voidawake.itch.io/sunken",
+				embedCode: 1321637
+			},
+			{
+				itchioLink: "https://pat5080.itch.io/gladiator-goblins",
+				embedCode: 1321632
+			},
+			{
+				itchioLink: "https://pixiepal.itch.io/shift-to-hell",
+				embedCode: 1321616
+			}
+		]
+	},
+	{
 		title: "Adaptive Jam",
 		linkToGame: "https://itch.io/jam/adaptive-jam/entries",
 		theme: "Adaptive",
