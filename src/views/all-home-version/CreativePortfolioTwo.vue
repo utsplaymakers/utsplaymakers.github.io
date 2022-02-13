@@ -1,6 +1,6 @@
 <template>
   <div class="home-four">
-
+    <Header />
     <Slider />
     <!-- End Slider Section -->
 
@@ -37,7 +37,7 @@
 
 <script>
 import Slider from "../../components/slider/SliderFour";
-
+import Header from "../../components/Header"
 import Portfolio from "../../components/portfolio/PortfolioTwo";
 
 
@@ -48,7 +48,7 @@ import Footer from "../../components/Footer";
 export default {
   components: {
     Slider,
-
+    Header,
     Portfolio,
 
 

@@ -2807,9 +2807,6 @@ body.dark .shane_tm_settings .cursor li .svg,
 /*	16) SHANE MEDIA QUERIES (FOR SMALL DEVIVES)
 /*---------------------------------------------------*/
 @media (max-width: 1040px) {
-  .shane_tm_topbar {
-    display: none;
-  }
   .shane_tm_mobile_menu {
     display: block;
   }
@@ -2913,6 +2910,9 @@ body.dark .shane_tm_settings .cursor li .svg,
   }
 }
 @media (max-width: 767px) {
+  .shane_tm_topbar {
+    display: none;
+  }  
   .shane_tm_hero .content {
     padding-right: 0px;
     width: 100%;

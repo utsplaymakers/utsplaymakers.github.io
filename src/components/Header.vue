@@ -17,18 +17,35 @@
               :duration="100"
               :alwaysTrack="true"
             >
-              <a href="#home" class="scrollactive-item">Home</a>
-              <a href="#about" class="scrollactive-item">About</a>
-              <a href="#portfolio" class="scrollactive-item">Portfolio</a>
-              <a href="#news" class="scrollactive-item">News</a>
+
 
               <a
                 class="white-fill-bg btn-outline btn_sm"
                 target="_blank"
                 rel="noreferrer"
-                href="#"
+                href="https://discord.gg/CMD2YPG"
               >
-                Buy Now
+                Discord
+              </a>
+
+
+              <a
+                class="white-fill-bg btn-outline btn_sm"
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.facebook.com/utsplaymakers"
+              >
+                Facebook
+              </a>
+
+
+              <a
+                class="white-fill-bg btn-outline btn_sm"
+                target="_blank"
+                rel="noreferrer"
+                href="https://activateuts.com.au/clubs/playmakers"
+              >
+                Membership
               </a>
             </scrollactive>
           </div>
